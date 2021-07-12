@@ -1,0 +1,25 @@
+.jeju_main_logo{
+    margin: 2rem 0;
+    font-family: 'Gugi', cursive;
+}
+    /*font-family: 'Jua', sans-serif;*/
+
+.jeju_main_btn{
+    margin-bottom: 2rem;
+    font-family: 'Jua', sans-serif;
+}
+
+.jeju_footer_logo{
+    margin: 1.5rem 0;
+    font-family: 'Gugi', cursive;
+}
+
+.jeju_footer_btn{
+    margin-bottom: 2rem;
+    font-family: 'Jua', sans-serif;
+}
+
+ h1, h2, h3, h4, h5, h6{
+    font-family: 'Jua', sans-serif;
+ }
+

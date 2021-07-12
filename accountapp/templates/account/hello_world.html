@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="margin:  2rem; text-align: center ">
+        <h1>메소드</h1>
+
+        <form action="/accountapp/hello_world/" method="post">
+            {% csrf_token %}
+{#   {% csrf_token %}  이걸 넣어야 정상적으로 보안? 뭐 그럼           #}
+            <input type="text" name = "input">
+            <input type="submit" class="btn btn-dark rounded-pill px-5">
+        </form>
+
+        <h3>{{ text }}</h3>
+    </div>
+
+{% endblock %}
