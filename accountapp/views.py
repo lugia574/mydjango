@@ -23,16 +23,16 @@ def hello_world (request):
         new_data.save()
 
         # data_list = HelloWorld.objects.all()
-        # return render(request, 'account/hello_world.html', context={'data_list': data_list})
+        # return render(request, 'accountapp/hello_world.html', context={'data_list': data_list})
         
         return HttpResponseRedirect(reverse('accountapp:hello_world'))
     else:
 
         data_list = HelloWorld.objects.all()
-        return render(request, 'account/hello_world.html', context={'data_list': data_list})
+        return render(request, 'accountapp/hello_world.html', context={'data_list': data_list})
 
 class AccountCreateView(CreateView):
-    model = User
-    form_class = UserCreationForm
-    success_url = reverse_lazy('accountapp:hello_world')
-    templates_name = 'accountapp/create.html'
+    model = User # 유저 장고 디폴트 모델
+    form_class = UserCreationForm # 회원가입 폼
+    success_url = reverse_lazy('accountapp:hello_world') # 저장 되어 있다가 호출 될때 값을 줘야 해서 reverse 랑 방식이 다름 그래서 _lazy를 쓰는거야
+    template_name = 'accountapp/create.html'

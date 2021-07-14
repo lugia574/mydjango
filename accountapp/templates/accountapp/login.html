@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="text-center">
+        <div class="m-5">
+            <h4>Login</h4>
+        </div>
+        <div>
+            <form action="{% url 'accountapp:login'%}" method="post">
+                {% csrf_token %}
+                {# csrf_token 이걸 넣어야 폼이 정상적으로 작동됨#}
+                {{ form }}
+{#                이럼 인풋태그가 알아서 된데?#}
+                <div class="m-5">
+                    <input type="submit" class="btn btn-dark rounded=pill px-5">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

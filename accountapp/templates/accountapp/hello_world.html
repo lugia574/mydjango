@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div id="main" style="margin:  2rem; text-align: center ">
-        <h1>메소드</h1>
 
-        <form action="/accountapp/hello_world/" method="post">
+
+    <div style="margin:  2rem; text-align: center">
+        <h1>METHOD</h1>
+
+        <form action="/account/hello_world/" method="post">
             {% csrf_token %}
 {#   {% csrf_token %}  이걸 넣어야 정상적으로 보안? 뭐 그럼           #}
             <input type="text" name = "input">
@@ -17,3 +19,4 @@
     </div>
 
 {% endblock %}
+
