@@ -1,6 +1,10 @@
 <div style=" text-align: center">
     <div class="jeju_main_logo">
+        {# 영상 넣자#}
+      <video muted autoplay loop>
+        <source src="/static/Nature.mp4" type="video/mp4">
         <h1>jeju island</h1>
+      </video>
     </div>
 
     <div class="jeju_main_btn" >
@@ -13,7 +17,7 @@
 
         {% else %}
             <span>마이페이지</span>
-            <span>로그아웃</span>
+            <span><a href="#" class="text-dark" >로그아웃</a></span>
         {% endif %}
     </div>
 </div>
