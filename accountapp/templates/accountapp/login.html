@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 
-    <div class="text-center">
+    <div class="text-center mw-500 m-auto">
         <div class="m-5">
             <h4>Login</h4>
         </div>
@@ -10,8 +11,9 @@
             <form action="{% url 'accountapp:login'%}" method="post">
                 {% csrf_token %}
                 {# csrf_token 이걸 넣어야 폼이 정상적으로 작동됨#}
-                {{ form }}
-{#                이럼 인풋태그가 알아서 된데?#}
+{#                {{ form }}#}
+                {% bootstrap_form form %}
+
                 <div class="m-5">
                     <input type="submit" class="btn btn-dark rounded=pill px-5">
                 </div>

@@ -6,7 +6,15 @@
     <div class="jeju_main_btn" >
         <span>제법</span>
         <span>그럴듯</span>
-        <span>한데</span>
-        <span>ㅗㅜㅑ</span>
+        {% if not user.is_authenticated%}
+            <span><a href="{% url 'accountapp:login' %}" class="text-dark">로그인</a></span>
+            <span><a href="{% url 'accountapp:create' %}" class="text-dark">회원가입</a></span>
+
+
+        {% else %}
+            <span>마이페이지</span>
+            <span>로그아웃</span>
+        {% endif %}
     </div>
 </div>
+

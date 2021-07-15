@@ -1,6 +1,7 @@
 .jeju_main_logo{
     margin: 2rem 0;
     font-family: 'Gugi', cursive;
+    background: lightsteelblue;
 }
     /*font-family: 'Jua', sans-serif;*/
 
@@ -19,7 +20,15 @@
     font-family: 'Jua', sans-serif;
 }
 
- .main{
-    font-family: 'Jua', sans-serif;
- }
+
+.mw-500{
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
+
+
+
+ /*a:link { color: red; text-decoration: none;}*/
+ /*a:visited { color: black; text-decoration: none;}*/
+ /*a:hover { color: blue; text-decoration: underline;}*/
 
