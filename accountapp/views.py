@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 
 from accountapp.models import HelloWorld
 
@@ -36,3 +36,8 @@ class AccountCreateView(CreateView):
     form_class = UserCreationForm # 회원가입 폼
     success_url = reverse_lazy('accountapp:hello_world') # 저장 되어 있다가 호출 될때 값을 줘야 해서 reverse 랑 방식이 다름 그래서 _lazy를 쓰는거야
     template_name = 'accountapp/create.html'
+
+class AccountDetailView(DetailView):
+    model = User
+    context_object_name ='target_user'
+    template_name = 'accountapp/detail.html'

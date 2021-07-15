@@ -2,11 +2,14 @@
     <div class="jeju_main_logo">
         {# 영상 넣자#}
       <video muted autoplay loop>
-        <source src="/static/Nature.mp4" type="video/mp4">
-        <h1>jeju island</h1>
-      </video>
-    </div>
+        <source src="/static/Sea.mp4" type="video/mp4">
 
+      </video>
+
+        <div class="jb-text">
+             <h1>jeju island</h1>
+        </div>
+    </div>
     <div class="jeju_main_btn" >
         <span>제법</span>
         <span>그럴듯</span>
@@ -16,9 +19,10 @@
 
 
         {% else %}
-            <span>마이페이지</span>
-            <span><a href="#" class="text-dark" >로그아웃</a></span>
+            <span><a href="{% url 'accountapp:detail' pk=user.pk%}" class="text-dark">마이페이지</a></span>
+            <span><a href="{% url 'accountapp:logout' %}" class="text-dark">로그아웃</a></span>
         {% endif %}
     </div>
+
 </div>
 
