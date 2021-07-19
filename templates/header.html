@@ -1,28 +1,31 @@
 <div style=" text-align: center">
-    <div class="jeju_main_logo">
-        {# 영상 넣자#}
-      <video muted autoplay loop>
-        <source src="/static/Sea.mp4" type="video/mp4">
+    <div class="jeju_main">
+        <div class="jeju_main_logo">
+            {# 영상 넣자#}
+          <video muted autoplay loop>
+            <source src="/static/Sea.mp4" type="video/mp4">
 
-      </video>
+          </video>
 
-        <div class="jb-text">
-             <h1>jeju island</h1>
+            <div class="jb-text">
+                 <h1><a href="{% url 'accountapp:hello_world' %}" class="text-dark" >jeju island</a></h1>
+            </div>
+
+
         </div>
+            <div class="jeju_main_btn" >
+                <span class="logo_btn">제법</span>
+                <span class="logo_btn">그럴듯</span>
+                {% if not user.is_authenticated%}
+                    <span class="logo_btn"><a href="{% url 'accountapp:login' %}" class="text-dark">로그인</a></span>
+                    <span class="logo_btn"><a href="{% url 'accountapp:create' %}" class="text-dark">회원가입</a></span>
+
+
+                {% else %}
+                    <span class="logo_btn"><a href="{% url 'accountapp:detail' pk=user.pk%}" class="text-dark">마이페이지</a></span>
+                    <span class="logo_btn"><a href="{% url 'accountapp:logout' %}" class="text-dark">로그아웃</a></span>
+                {% endif %}
+            </div>
     </div>
-    <div class="jeju_main_btn" >
-        <span>제법</span>
-        <span>그럴듯</span>
-        {% if not user.is_authenticated%}
-            <span><a href="{% url 'accountapp:login' %}" class="text-dark">로그인</a></span>
-            <span><a href="{% url 'accountapp:create' %}" class="text-dark">회원가입</a></span>
-
-
-        {% else %}
-            <span><a href="{% url 'accountapp:detail' pk=user.pk%}" class="text-dark">마이페이지</a></span>
-            <span><a href="{% url 'accountapp:logout' %}" class="text-dark">로그아웃</a></span>
-        {% endif %}
-    </div>
-
 </div>
 
