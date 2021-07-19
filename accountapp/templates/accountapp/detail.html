@@ -12,6 +12,9 @@
         <div>
             <a href="{% url 'accountapp:update' pk=target_user.pk %}" class="text-dark">정보 변경</a>
         </div>
+        <div>
+            <a href="{% url 'accountapp:delete' pk=target_user.pk %}" class="text-dark">정보 삭제</a>
+        </div>
     </div>
 
 {% endblock %}

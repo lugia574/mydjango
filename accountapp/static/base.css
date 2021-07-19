@@ -20,13 +20,18 @@ body{
 
 /*}*/
 
-.jeju_main_logo h1 { position: absolute; top: 50%; width: 100%; }
+.jeju_main_logo h1 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
 
 .jb-text {
     position: absolute;
     top: 50%;
     width: 100%;
-    text-align: center;}
+    text-align: center;
+}
 
 
 
